@@ -2,9 +2,15 @@
 
 Normale Windows Server Installation (Desktopoberfläche)
 Windows Updates online installieren
-wf.msc angeheftet
-Logging aktiviert - 3 Logs pro Netzwerkmodus
-Servername geändert
+wf.msc anheften
+
+Logging aktivieren - 3 Logs pro Netzwerkmodus
+Servername ändern
+
+WSUS ID resetten
+
+......
+
 RDP aktiviert (temporär)
 Teamviewer Host installiert (temporär ?)
 AMP installiert (nachdem Servername korrekt)
