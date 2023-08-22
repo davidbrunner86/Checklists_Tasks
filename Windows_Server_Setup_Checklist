@@ -30,6 +30,8 @@ Dienst "Remoteregistrierung" deaktivieren
 Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager
  
 
+schadet zwischendurch nicht:
+ipconfig /flushdns && ipconfig /registerdns
 
 
 
