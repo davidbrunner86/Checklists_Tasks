@@ -13,5 +13,5 @@ Mgmt IP change direkt an der konsole. Einstellung vlan id nicht vergessen. zur s
 ssh in vcenter appliance  
 kein Shell nötig  
 
-neustart des DNS Resolvers:
+neustart des DNS Resolvers:  
 com.vmware.appliance.version1.services.restart --name dnsmasq
