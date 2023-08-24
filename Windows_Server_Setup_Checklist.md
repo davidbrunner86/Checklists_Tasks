@@ -1,40 +1,49 @@
 # Checkliste beim aufsetzen eines neuen Windows Servers
 
-Normale Windows Server Installation (Desktopoberfläche)
-Windows Updates online installieren
-wf.msc anheften
+
+Normale Windows Server Installation (Desktopoberfläche)  
+Windows Updates online installieren  
+
+Treiberinstallation  
+HPE Treiber-ISO  
+HPE serversoftware  
+
+
+wf.msc anheften  
+Key eintragen und aktivieren  
 
 Logging aktivieren - 3 Logs pro Netzwerkmodus
 Servername ändern
 
 WSUS ID resetten
 
-......
+.....
 
-RDP aktiviert (temporär)
-Teamviewer Host installiert (temporär ?)
-AMP installiert (nachdem Servername korrekt)
-AMP vollständiger SCAN gestartet
-Konten- Apps wieder starten 
-Treiberinstallation
-Windows aktivieren
-7zip
-HPE Treiber-ISO
-HPE serversoftware
-veeam B&R installation
-B&R Webconsole
-VeeamOne Ports:
-2714,2742,2741,1239,2805
-Dienst "Remoteregistrierung" deaktivieren
+RDP aktiviert (temporär)  
+Teamviewer Host installiert (temporär ?)  
+3rd Party AntiVirus Programm installiert (nachdem Servername korrekt)  
+Vollscan durch AV Programm ggf.  
+Einstellung: Konten- Apps wieder starten   
 
-Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager
+
+7zip  
+
+VEEAM  
+veeam B&R installation  
+B&R Webconsole  
+VeeamOne Ports:  
+2714,2742,2741,1239,2805  
+
+Dienst "Remoteregistrierung" deaktivieren  
+
+Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager  
  
 
-schadet zwischendurch nicht:
-ipconfig /flushdns && ipconfig /registerdns
+schadet zwischendurch nicht:  
+ipconfig /flushdns && ipconfig /registerdns  
 
 
-
+.............................................................
 
 ausständig:
 Veeam One einrichten, restriktive Userberechtigungen
