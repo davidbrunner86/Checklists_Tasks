@@ -8,9 +8,10 @@ esxcli software profile update -p ESXi-7.0U3n-21930508-standard -d https://hostu
 
 https://kb.vmware.com/s/article/2084629
 
-mgmt IP change direkt an der konsole. vlan id nicht vergessen. zur sicherheit neustart ESXI...
+Mgmt IP change direkt an der konsole. Einstellung vlan id nicht vergessen. zur sicherheit neustart ESXI, wenn eh Wartungsmodus, was empfehlenswert ist
 
-ssh in vcenter appliance. kein Shell nötig
+ssh in vcenter appliance  
+kein Shell nötig  
+
 neustart des DNS Resolvers:
-
 com.vmware.appliance.version1.services.restart --name dnsmasq
