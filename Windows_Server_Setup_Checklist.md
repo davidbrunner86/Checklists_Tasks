@@ -111,3 +111,20 @@ Get-NetFirewallRule -Displayname $FirewallRule | Set-NetFirewallRule -Enabled:fa
 
 IIS Logs - Ordner komprimieren
 
+
+
+.........................
+
+## NetConnection Profil (Domäne, Privat, Öffentlich) ändern
+
+Manchmal wird dies falsch erkannt oder ändert sich und muss anders gesetzt werden
+
+Am schnellsten wohl per Regedit:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles
+
+Powershell:
+
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\" 
+➜ $UUID = "{01234ABC-...}" ➜ $VALUE = "Network1" ➜ (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID").ProfileName ➜ 
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID" -Name ProfileName -Value $VALUE
