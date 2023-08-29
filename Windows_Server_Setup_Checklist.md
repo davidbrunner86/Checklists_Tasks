@@ -134,3 +134,22 @@ Powershell:
 Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\" 
 ➜ $UUID = "{01234ABC-...}" ➜ $VALUE = "Network1" ➜ (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID").ProfileName ➜ 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID" -Name ProfileName -Value $VALUE
+
+
+
+.....................
+weitere Vorlagen:
+https://www.alitajran.com/windows-server-post-installation/
+
+Do not start Server Manager automatically at logon  
+Turn off Internet Explorer Enhanced Security Configuration  
+[<img src="[img/myImage.png](https://www.alitajran.com/wp-content/uploads/2021/11/Windows-Server-post-installation-configuration-03.png)">]
+[<img src="https://www.alitajran.com/wp-content/uploads/2021/11/Windows-Server-post-installation-configuration-03.png">]
+
+
+Set time zone  
+Check Windows Server network card  
+Configure Windows Firewall to allow pings  
+Update Windows Server  
+
+
