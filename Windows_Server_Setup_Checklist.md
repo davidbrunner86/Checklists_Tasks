@@ -153,3 +153,16 @@ Configure Windows Firewall to allow pings
 Update Windows Server  
 
 
+
+......................
+weitere Quellen:
+
+https://github.com/MicrosoftDocs/windows-itpro-docs/tree/public/windows/security
+
+https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
+
+https://github.com/decalage2/awesome-security-hardening
+
+https://github.com/PaulSec/awesome-windows-domain-hardening
+
+https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj717277(v=ws.11)
