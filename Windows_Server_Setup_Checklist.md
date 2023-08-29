@@ -4,13 +4,13 @@
 Normale Windows Server Installation (Desktopoberfläche)  
 Windows Updates online installieren  
 
-Treiberinstallation  
-HPE Treiber-ISO  
-HPE serversoftware  
+<ins>Treiberinstallation</ins>  
+Treiber-ISO (zb. von HPE)  
+Serversoftware (zb. von HPE)  
 
 
 wf.msc anheften  
-Key eintragen und aktivieren  
+Windows OS LizenzKey eintragen und aktivieren  
 
 Logging aktivieren - 3 Logs pro Netzwerkmodus
 Servername ändern
@@ -24,20 +24,22 @@ Teamviewer Host installiert (temporär ?)
 3rd Party AntiVirus Programm installiert (nachdem Servername korrekt)  
 Vollscan durch AV Programm ggf.  
 Einstellung: Konten- Apps wieder starten   
+Dienst "Remoteregistrierung" deaktivieren  
 
-
+Standardsoftware installieren  
 7zip  
 
+<ins>Vorlage Veeam</ins>  
 VEEAM  
 veeam B&R installation  
 B&R Webconsole  
 VeeamOne Ports:  
 2714,2742,2741,1239,2805  
 
-Dienst "Remoteregistrierung" deaktivieren  
 
+Bei FC Block Storage:  
 Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager  
- 
+--- hier fehlt Bild --- 
 
 schadet zwischendurch nicht:  
 ipconfig /flushdns && ipconfig /registerdns  
@@ -111,7 +113,11 @@ Get-NetFirewallRule -Displayname $FirewallRule | Set-NetFirewallRule -Enabled:fa
 
 IIS Logs - Ordner komprimieren
 
+.......................
+Best Practices Firewall:
+https://activedirectorypro.com/windows-firewall-best-practices/
 
+netsh advfirewall show all  
 
 .........................
 
