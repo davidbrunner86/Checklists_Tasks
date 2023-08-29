@@ -143,8 +143,8 @@ https://www.alitajran.com/windows-server-post-installation/
 
 Do not start Server Manager automatically at logon  
 Turn off Internet Explorer Enhanced Security Configuration  
-[<img src="[img/myImage.png](https://www.alitajran.com/wp-content/uploads/2021/11/Windows-Server-post-installation-configuration-03.png)">]
-[<img src="https://www.alitajran.com/wp-content/uploads/2021/11/Windows-Server-post-installation-configuration-03.png">]
+
+<img src="https://www.alitajran.com/wp-content/uploads/2021/11/Windows-Server-post-installation-configuration-03.png">
 
 
 Set time zone  
