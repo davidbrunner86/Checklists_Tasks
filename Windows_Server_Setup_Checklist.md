@@ -166,3 +166,62 @@ https://github.com/decalage2/awesome-security-hardening
 https://github.com/PaulSec/awesome-windows-domain-hardening
 
 https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj717277(v=ws.11)
+
+
+...............  
+Dienste deaktivieren  
+https://www.tech-faq.net/unwichtige-dienste-in-server-2019-deaktivieren/  
+
+Powershell  
+Set-Service "XblAuthManager" -StartupType disabled #XBOX Live Authentifizierung  
+Set-Service "XblGameSave" -StartupType disabled #XBOX Live-Spiele speichern  
+
+Set-Service "MapsBroker" -StartupType disabled #Manager für heruntergeladene Karten  
+Set-Service "lfsvc" -StartupType disabled #Geolocation-Dienst  
+Set-Service "AxInstSV" -StartupType disabled #ActiveX-Installer (AxInstSV)  
+Set-Service "bthserv" -StartupType disabled #Bluetooth-Unterstützungsdienst  
+Set-Service "CDPUserSvc" -StartupType disabled #CDPUserSvc  
+Set-Service "PimIndexMaintenanceSvc" -StartupType disabled #Kontaktdaten  
+Set-Service "dmwappushservice" -StartupType disabled #dmwappushsvc (WAP Push-Nachrichtenroutingdienst)  
+Set-Service "SharedAccess" -StartupType disabled #Gemeinsame Nutzung der Internetverbindung  
+Set-Service "lltdsvc" -StartupType disabled #Verbindungsschicht-Topologieerkennungs-Zuordnungsprogramm  
+Set-Service "wlidsvc" -StartupType disabled #Anmelde-Assistent für Microsoft-Konten /ACHTUNG: appx-Pakete nicht mehr ausführbar  
+Set-Service "NgcSvc" -StartupType disabled #Microsoft Passport  
+Set-Service "NgcCtnrSvc" -StartupType disabled #Microsoft Passport-Container  
+Set-Service "NcbService" -StartupType disabled #Netzwerkverbindungsbroker  
+Set-Service "PhoneSvc" -StartupType disabled #Telefondienst  
+Set-Service "PcaSvc" -StartupType disabled #Programmkompatibilitäts-Assistent-Dienst  
+Set-Service "QWAVE" -StartupType disabled #Verbessertes Windows-Audio/Video-Streaming  
+Set-Service "RmSvc" -StartupType disabled #Funkverwaltungsdienst  
+Set-Service "SensorDataService" -StartupType disabled #Sensordatendienst  
+Set-Service "SensrSvc" -StartupType disabled #Sensorüberwachungsdienst  
+Set-Service "SensorService" -StartupType disabled #Sensordienst  
+Set-Service "ShellHWDetection" -StartupType disabled #Shellhardwareerkennung  
+Set-Service "ScDeviceEnum" -StartupType disabled #Smartcard-Geräteaufzählungsdienst  
+Set-Service "SSDPSRV" -StartupType disabled #SSDP-Suche  
+Set-Service "WiaRpc" -StartupType disabled #Ereignisse zum Abrufen von Standbildern  
+Set-Service "OneSyncSvc" -StartupType disabled #Synchronisierungshost  
+Set-Service "TabletInputService" -StartupType disabled #Dienst für Bildschirmtastatur und Schreibbereich  
+Set-Service "upnphost" -StartupType disabled #UPnP-Gerätehost  
+Set-Service "UserDataSvc" -StartupType disabled #Benutzerdatenzugriff  
+Set-Service "UnistoreSvc" -StartupType disabled #Benutzerdatenspeicher  
+Set-Service "WalletService" -StartupType disabled #WalletService  
+Set-Service "Audiosrv" -StartupType disabled #Windows-Audio  
+Set-Service "AudioEndpointBuilder" -StartupType disabled #Windows-Audio-Endpunkterstellung  
+Set-Service "FrameServer" -StartupType disabled #Windows-Kamera-FrameServer  
+Set-Service "stisvc" -StartupType disabled #Windows-Bilderfassung (WIA)  
+Set-Service "wisvc" -StartupType disabled #Windows-Insider-Dienst  
+Set-Service "icssvc" -StartupType disabled #Windows-Dienst für mobile Hotspots  
+Set-Service "WpnService" -StartupType disabled #Windows-Pushbenachrichtigungssystemdienst  
+Set-Service "WpnUserService" -StartupType disabled #Windows-Pushbenachrichtigungs-Benutzerdienst  
+
+
+# Wenn kein Printserver  
+Set-Service "PrintNotify" -StartupType disabled #Druckererweiterungen und -benachrichtigungen  
+# Wenn kein Printserver oder Domaämnencontroller  
+Set-Service "Spooler" -StartupType disabled #Druckerwarteschlange  
+
+
+weiters:  
+https://learn.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server  
+
