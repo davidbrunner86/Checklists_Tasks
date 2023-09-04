@@ -8,6 +8,9 @@ Windows Updates online installieren
 Treiber-ISO (zb. von HPE)  
 Serversoftware (zb. von HPE)  
 
+fixe IP vergeben oder sicherstellen, dass (vorläufig) per DHCP Reservierung eine fixe ausgestellt wird
+WINS / NetBIOS deaktivieren (sofern nicht explizit benötigt)
+IPv6 deaktivieren ( ?? wirklich ?? )
 
 wf.msc anheften  
 Windows OS LizenzKey eintragen und aktivieren  
@@ -53,7 +56,7 @@ gMSA Accounts, Add-WindowsFeature RSAT-AD-PowerShell
 
 firewallregeln strikt definieren  !! anpassen! Teils musste man sie deaktivieren
 NIC Teaming konfigurieren
-IPs fix setzen
+
 SAN HBAs konfigurieren (?)
 
 Vorlage:
