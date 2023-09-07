@@ -19,10 +19,8 @@ esxcli software sources vib list --depot=https://hostupdate.vmware.com/software/
 
 #nächste Version zum beispiel: 12.2.5.21855600-22082334  
 
-#Installieren  
-esxcli software vib install -v https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/esx/vmw/vib20/tools-light/VMware_locker_tools-light-12.2.5.21855600-22082334.vib  
-#Vorlage  
-#esxcli software vib install -v https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/esx/vmw/vib20/tools-light/VMware_locker_tools-light_11.1.1.16303738-16701467.vib  
+#Update auf neueste Version   
+esxcli software vib update -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml --vibname tools-light
 
 #maintenance mode  
 #reboot  
