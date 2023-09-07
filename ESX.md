@@ -29,6 +29,11 @@ esxcli software vib update -d https://hostupdate.vmware.com/software/VUM/PRODUCT
 vmware -v  
 
 
+.....................
+
+## ESXi Tools updaten per Baseline  
+https://thesleepyadmins.com/2021/07/01/updating-vmware-tools-on-esxi-7-0-host-using-vmware-lifecycle-manager/  
+
 
 ................
 ## VLAN SVR Core change
