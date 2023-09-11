@@ -2,12 +2,12 @@
 ## ESXI Update August 23
 
 In Reihenfolge:  
-VMs verschieben (VLSC VM kann bleiben) 
+VMs verschieben (VLSC VM kann bleiben)  
 Host in Wartungsmodus versetzen  
 In Vcenter: Host - Configure - Services - SSH starten  
 Mit Administratorlogin per SSH auf Host verbinden  
 Kommando:  
-esxcli software profile update -p ESXi-7.0U3n-21930508-standard -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml
+esxcli software profile update -p ESXi-7.0U3n-21930508-standard -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml  
 Reboot  
 ................
 ## ESXi Tools Update
