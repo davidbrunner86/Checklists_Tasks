@@ -1,7 +1,7 @@
 
 ## Quick Check AD Health:  
 
-# DCDiag Script
+### DCDiag Script
 DCDiag.cmd  
 
 :start  
