@@ -17,3 +17,8 @@ Dann das Script:
 
 New-NetIPAddress –IPAddress 192.168.1.13 -DefaultGateway 192.168.1.1 -PrefixLength 24 -InterfaceIndex IfIndex  
 
+
+
+## GMSA Account erstellen  
+
+New-ADServiceAccount -Name gMSA_SERVICE -DNSHostName gMSA_SERVER.sample.local -PrincipalsAllowedToRetrieveManagedPassword SERVERNAME$
