@@ -31,3 +31,15 @@ https://community.spiceworks.com/topic/2209705-program-requires-admin-access-to-
 Shortcut erstellen:  
 
 https://www.howtogeek.com/124087/how-to-create-a-shortcut-that-lets-a-standard-user-run-an-application-as-administrator/  
+
+
+## Windows Firewall Logging  
+
+Firewall Logging ist per Default auf %systemroot%\system32\LogFiles\Firewall gesetzt. Ich setze gern eigene Log Dateien für die 3 Modi (Domain, Privat, Public).  
+Jedoch kann es passieren, dass gar keine Log Dateien erzeugt werden... und auch der Ordner "Firewall" gar nicht existiert. Eigentlich sollte er per Default erzeugt werden.  
+
+Im Netz findet man viele Hinweise darauf.  
+Es ist nötig, dass der lokale Dienst "NT SERVICE\MpsSvc" Vollzugriff auf den Ordner hat. Ich berechtige hier auf den "LogFiles" Ordner, damit auch der Firewall Unterordner automatisch erzeugt wird.  
+Natürlich reicht der Firewall Ordner auch, wenn man eh explizit diesen angibt.  
+
+Sehr ärgerlich...  
