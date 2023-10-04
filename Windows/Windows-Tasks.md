@@ -33,6 +33,8 @@ Shortcut erstellen:
 https://www.howtogeek.com/124087/how-to-create-a-shortcut-that-lets-a-standard-user-run-an-application-as-administrator/  
 
 
+Ansonsten hat jedes Benutzerkonte Vollzugriff auf den eigenen %appdata% Ordner. Dies macht sich zb. auch MS Teams zuNutzen, damit es jeder Benutzer für sich installieren kann...  
+
 ## Windows Firewall Logging  
 
 Firewall Logging ist per Default auf %systemroot%\system32\LogFiles\Firewall gesetzt. Ich setze gern eigene Log Dateien für die 3 Modi (Domain, Privat, Public).  
