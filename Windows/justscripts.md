@@ -14,6 +14,13 @@ xcopy \\vorlage\shortcut.lnk C:\Users\Public\Desktop
 
 Get-WmiObject -query "SELECT * FROM WIN32_PRINTER WHERE Default = TRUE"  
 
+#Steht hier:
+#HKEY_USERS\S-1-5-21-329068152-507921405-1060284298-10572\Software\Microsoft\Windows NT\CurrentVersion\Windows
+
+#Standarddrucker anzeigen:
+wmic printer where "Default = 'TRUE'" get Caption  
+
+
 
 ## Diverse 
 
