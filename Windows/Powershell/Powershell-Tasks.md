@@ -42,7 +42,7 @@ Function WriteLog {
     Add-Content $LogPathName -value $LogMessage  
     }  
 
- ### los gehts  
+#los gehts  
 
 $FileList = Get-ChildItem –Path $FilePath  
 
