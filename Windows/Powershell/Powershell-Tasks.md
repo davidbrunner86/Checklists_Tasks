@@ -22,3 +22,39 @@ New-NetIPAddress –IPAddress 192.168.1.13 -DefaultGateway 192.168.1.1 -PrefixLe
 ## GMSA Account erstellen  
 
 New-ADServiceAccount -Name gMSA_SERVICE -DNSHostName gMSA_SERVER.sample.local -PrincipalsAllowedToRetrieveManagedPassword SERVERNAME$
+
+
+## Einfaches Log Script Infinity  
+
+<#  
+Log Kommentar  
+#>  
+
+#Variablen  
+$FilePath = "C:\Temp\work\IN"  
+$LogPathName = "c:\Scripts\LogContent.log"  
+    
+#Log-Funktion  
+Function WriteLog {  
+    Param ([string]$LogString)  
+    $Stamp = Get-Date  
+    $LogMessage = "$Stamp - $LogString"  
+    Add-Content $LogPathName -value $LogMessage  
+    }  
+
+ ### los gehts  
+
+$FileList = Get-ChildItem –Path $FilePath  
+
+get-date >> "c:\temp\TestLog.log"  
+"*****************" >> "c:\temp\TestLog.log"  
+
+#loop infinite  
+while (1 -eq 1 ){  
+
+foreach($item in $FileList) {  
+    WriteLog $item  
+}  
+
+start-sleep -seconds 5  
+}  
