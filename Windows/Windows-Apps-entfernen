@@ -1,0 +1,32 @@
+Alarm und Uhr	 
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage  
+Filme und TV  
+Get-AppxPackage *zunevideo* | Remove-AppxPackage  
+Fotos	  
+Get-AppxPackage *photos* | Remove-AppxPackage  
+Groove Musik	  
+Get-AppxPackage *zunemusic* | Remove-AppxPackage  
+Kalender & Mail	  
+Get-AppxPackage *communicationsapps* | Remove-AppxPackage  
+Kamera	  
+Get-AppxPackage *windowscamera* | Remove-AppxPackage  
+Karten	  
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage  
+Kontakte	  
+Get-AppxPackage *people* | Remove-AppxPackage  
+Paint 3D	  
+Get-AppxPackage *mspaint* | Remove-AppxPackage  
+Rechner	  
+Get-AppxPackage *windowscalculator* | Remove-AppxPackage  
+Sprachrekorder	  
+Get-AppxPackage *soundrecorder* | Remove-AppxPackage  
+Xbox	  
+Get-AppxPackage *xboxapp* | Remove-AppxPackage  
+
+
+Windows-Taste + R SystemPropertiesPerformance.exe  
+optimale leistung  
+danach aber "kanten der bildschirmschriftarten verfeinern"  
+
+
+einstellungen - datenschutz - hintergrund-apps deaktivieren  
