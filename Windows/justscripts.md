@@ -53,3 +53,16 @@ quit
 
 ### manuelles Update  
 "c:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeC2RClient.exe" /update user  
+
+
+## MAC lokal auflisten
+getmac  
+
+
+## Kurzer Speedcheck lokaler Storage  
+winsat.exe disk -drive c:  
+
+
+## DomainController auflisten von beliebiger Workstation/Server  
+netdom query /d:domain.local DC  
+
