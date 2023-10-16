@@ -8,9 +8,10 @@ Windows Updates online installieren
 Treiber-ISO (zb. von HPE)  
 Serversoftware (zb. von HPE)  
 
-fixe IP vergeben oder sicherstellen, dass (vorläufig) per DHCP Reservierung eine fixe ausgestellt wird
-WINS / NetBIOS deaktivieren (sofern nicht explizit benötigt)
-IPv6 deaktivieren ( ?? wirklich ?? )
+fixe IP vergeben oder sicherstellen, dass (vorläufig) per DHCP Reservierung eine fixe ausgestellt wird  
+WINS / NetBIOS deaktivieren (sofern nicht explizit benötigt)  
+RDP aktivieren  
+IPv6 deaktivieren ( ?? wirklich ?? )  
 
 wf.msc anheften  
 Windows OS LizenzKey eintragen und aktivieren  
