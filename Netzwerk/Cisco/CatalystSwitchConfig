@@ -1,0 +1,171 @@
+template running config ...
+
+version 15.2  
+no service pad  
+service timestamps debug datetime msec  
+service timestamps log datetime msec  
+no service password-encryption  
+!
+hostname Service									<-- anpassen
+!  
+boot-start-marker  
+boot-end-marker  
+!  
+enable secret 5 xxxxxxxxxxxxxxxxxxxx <-- anpassen    
+!  
+username admin privilege 15 secret 8 xxxxxxxxxx <-- anpassen
+no aaa new-model  
+! 
+clock timezone CET 1 0  
+clock summer-time CEST recurring last Sun Mar 02:00 last Sun Oct 03:00  
+service timestamps debug datetime msec localtime show-timezone  
+service timestamps log datetime msec localtime show-timezone  
+
+!
+!
+!
+ip domain-name domain.local  <-- anpassen
+vtp mode transparent  
+!
+!
+!
+crypto key generate rsa mod 2048							<-- command einzeln kopieren
+!
+!
+!
+!
+mls qos map policed-dscp  0 10 18 24 46 to 8
+mls qos map cos-dscp 0 8 16 24 32 46 48 56
+mls qos srr-queue output cos-map queue 1 threshold 3 4 5
+mls qos srr-queue output cos-map queue 2 threshold 1 2
+mls qos srr-queue output cos-map queue 2 threshold 2 3
+mls qos srr-queue output cos-map queue 2 threshold 3 6 7
+mls qos srr-queue output cos-map queue 3 threshold 3 0
+mls qos srr-queue output cos-map queue 4 threshold 3 1
+mls qos srr-queue output dscp-map queue 1 threshold 3 32 33 40 41 42 43 44 45
+mls qos srr-queue output dscp-map queue 1 threshold 3 46 47
+mls qos srr-queue output dscp-map queue 2 threshold 1 16 17 18 19 20 21 22 23
+mls qos srr-queue output dscp-map queue 2 threshold 1 26 27 28 29 30 31 34 35
+mls qos srr-queue output dscp-map queue 2 threshold 1 36 37 38 39
+mls qos srr-queue output dscp-map queue 2 threshold 2 24
+mls qos srr-queue output dscp-map queue 2 threshold 3 48 49 50 51 52 53 54 55
+mls qos srr-queue output dscp-map queue 2 threshold 3 56 57 58 59 60 61 62 63
+mls qos srr-queue output dscp-map queue 3 threshold 3 0 1 2 3 4 5 6 7
+mls qos srr-queue output dscp-map queue 4 threshold 1 8 9 11 13 15
+mls qos srr-queue output dscp-map queue 4 threshold 2 10 12 14
+mls qos queue-set output 1 threshold 1 100 100 50 200
+mls qos queue-set output 1 threshold 2 125 125 100 400
+mls qos queue-set output 1 threshold 3 100 100 100 400
+mls qos queue-set output 1 threshold 4 60 150 50 200
+mls qos queue-set output 1 buffers 15 25 40 20
+mls qos
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+auto qos srnd4
+errdisable recovery cause security-violation
+errdisable recovery cause link-flap
+errdisable recovery cause psecure-violation
+errdisable recovery interval 30
+!
+!
+!
+!
+!
+vlan 2
+ name Transfernetz  <--anpassen
+!
+vlan 3  
+ name Management  <-- anpassen
+!
+
+lldp run  
+!
+class-map match-all AUTOQOS_VOIP_DATA_CLASS  
+ match ip dscp ef  
+class-map match-all AUTOQOS_DEFAULT_CLASS  
+ match access-group name AUTOQOS-ACL-DEFAULT
+class-map match-all AUTOQOS_VOIP_SIGNAL_CLASS
+ match ip dscp cs3
+!
+policy-map AUTOQOS-SRND4-CISCOPHONE-POLICY
+ class AUTOQOS_VOIP_DATA_CLASS
+  set dscp ef
+  police 128000 8000 exceed-action policed-dscp-transmit
+ class AUTOQOS_VOIP_SIGNAL_CLASS
+  set dscp cs3
+  police 32000 8000 exceed-action policed-dscp-transmit
+ class AUTOQOS_DEFAULT_CLASS
+  set dscp default
+  police 10000000 8000 exceed-action policed-dscp-transmit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+macro global description cisco-global
+!
+interface FastEthernet0
+ no ip address
+!
+interface range GigabitEthernet1/0/1 - xx					<-- Portrange anpassen
+ description client
+ switchport voice vlan 8
+ switchport mode access
+ switchport nonegotiate
+ mls qos trust cos
+ macro description cisco-phone
+ spanning-tree portfast edge
+ spanning-tree bpduguard enable
+ service-policy input AUTOQOS-SRND4-CISCOPHONE-POLICY
+!
+!
+interface TenGigabitEthernet1/0/2						<-- Interface anpassen
+ description Uplink
+ switchport mode trunk
+!
+interface Vlan1
+ ip address 10.1.0.37 255.255.0.0						<< ip anpassen
+!
+interface Vlan8
+ no ip address
+ no ip route-cache
+!
+ip default-gateway 10.1.0.253							<< GW anpassen
+!
+no ip http server
+ip http authentication local
+ip http secure-server
+ip ssh version 2
+!
+ip access-list extended AUTOQOS-ACL-DEFAULT
+ permit ip any any
+!
+!
+snmp-server community public RO							<< andere community
+snmp mib flash cache
+!
+line con 0
+line vty 0 4
+ session-timeout 60
+ exec-timeout 60 0
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ session-timeout 60
+ exec-timeout 60 0
+ logging synchronous
+ login local
+ transport input ssh
+!
+ntp server 10.1.30.84  << NTP anpassen
+!
+end
