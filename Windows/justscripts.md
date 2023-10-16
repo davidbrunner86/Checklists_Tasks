@@ -15,6 +15,7 @@ xcopy \\vorlage\shortcut.lnk C:\Users\Public\Desktop
 Get-WmiObject -query "SELECT * FROM WIN32_PRINTER WHERE Default = TRUE"  
 
 
+## Diverse  
 
 ### FTP Script  
 
@@ -33,7 +34,7 @@ put samplefile.txt
 quit  
 
 
-### Office365  
+## Office365  
 
 ## manuelles Update  
 "c:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeC2RClient.exe" /update user  
