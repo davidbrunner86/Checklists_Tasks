@@ -1,0 +1,4 @@
+### div. Robocopy Commands
+
+#Allgemeiner Copy Befehl. Komplettes Mirroring!
+robocopy E:\CitrixShares \\giatechbrprofil\e$\CitrixShares /MIR /B /R:1 /W:1 /Copyall  
