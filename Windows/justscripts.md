@@ -15,7 +15,22 @@ xcopy \\vorlage\shortcut.lnk C:\Users\Public\Desktop
 Get-WmiObject -query "SELECT * FROM WIN32_PRINTER WHERE Default = TRUE"  
 
 
-## Diverse  
+## Diverse 
+
+ich habe folgenden Code um in einem Hauptordner mittels einer Schleife alle Unterordner zu suchen und jeden gefunden Ordner mit der Konsole von PowerArchiver zu zippen:  
+...  
+Hierbei werden die Zip-Dateien im Startpfad abgelegt (= %%d.zip), wegen der Übersicht wegen möchte ich aber folgenden Speicherpfad verwenden: D:\Sicherung\Box\zip\  
+
+In %%d ist der komplette Pfad mit der dynamischen Dateibezeichnung enthalten.  
+
+Wie muss man die bestehende Zeile ändern um den Pfad, welcher in %%d enthalten ist, durch einen anderen Pfad zu ersetzen damit die *.zip-Dateien woanders gespeichert werden?  
+
+Lösung:  
+for /D %%d in ("C:\temp\*") do "C:\PACL\pacomp64.exe" -a -c0 -r "D:\Sicherung\Box\zip\%%~nxd.zip" "%%d"  
+
+
+
+
 
 ### FTP Script  
 
