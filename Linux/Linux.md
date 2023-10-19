@@ -45,7 +45,14 @@ lösche unbenötigte Dateien:
 rm -r nstrace/*  
 
 
-https://ss64.com/bash/
+https://ss64.com/bash/  
 
 
+## Wireguard  
+
+### via commandline WG tunnel installieren und starten  
+
+nmcli connection import type wireguard file "/home/david/Dokumente/DavidWGLinuxHO.conf"  
+
+nmcli connection up 'DavidWGLinuxHO'  
 to be continued
