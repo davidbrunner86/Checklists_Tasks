@@ -1,0 +1,9 @@
+# Einfache Liste hilfreicher Cisco Befehle  
+
+### Liste Ports, die durch Fehler deaktiviert wurden:  
+
+sh int status err-disabled  
+
+### Liste Port-Status, nehme die einfachen Gigabit Ports raus (und zeige nur 10GbE)  
+
+sh int status | exclude Gi1
