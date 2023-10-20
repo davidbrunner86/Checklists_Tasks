@@ -1,7 +1,8 @@
 # Generell bei Eintritt von Mitarbeitern  
 
 Anlegen im zentralen Verzeichnis (zb. ActiveDirectory)  
-  - Vorname, Name, Titel/akad.m Grad, Abteilung, Anschrift des Dienstorts, Vorgesetzter, ...  
+  - Vorname, Name, Titel/akad.m Grad, Abteilung, Anschrift des Dienstorts, Vorgesetzter, ...
+
 Mitgliedschaft nach Angaben / Kopie von Kollegen / auf Anfrage -- ansonsten in der Einbarbeitungszeit, wenn Funktionen fehlen  
 Anlegen einer Mailbox (zb. Exchange)  
 Anlegen einer Durchwahl intern  
