@@ -1,2 +1,2 @@
 # Checklists_Tasks
-Allgemeine Sammlung und Checklisten für den IT Bereich
+Allgemeine Sammlung von einzelnen, hilfreichen Befehlen und Checklisten für den IT Bereich
