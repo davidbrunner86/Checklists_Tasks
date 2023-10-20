@@ -1,5 +1,7 @@
 # Generell bei Eintritt von Mitarbeitern  
 
+### Benutzer anlegen
+
 Anlegen im zentralen Verzeichnis (zb. ActiveDirectory)  
   - Vorname, Name, Titel/akad.m Grad, Abteilung, Anschrift des Dienstorts, Vorgesetzter, ...
 
@@ -16,7 +18,7 @@ Anlegen im Adressbuch Office-MFP Drucker
 Anlage im ERP System als Benutzer  
 
 
-# Einrichten / Personalisierung Hardware
+### Einrichten / Personalisierung Hardware
 
 Einrichtung Hardware (nach extra Checkliste)  
 
