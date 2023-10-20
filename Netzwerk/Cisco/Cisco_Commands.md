@@ -4,6 +4,14 @@
 
 sh int status err-disabled  
 
+### ... so einen Port wieder aktivieren:
+
+conf t  
+int .. (port angeben)  
+shut  
+no shut
+exit   
+
 ### Liste Port-Status, nehme die einfachen Gigabit Ports raus (und zeige nur 10GbE)  
 
 sh int status | exclude Gi1
