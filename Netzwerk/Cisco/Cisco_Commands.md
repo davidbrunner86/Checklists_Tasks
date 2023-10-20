@@ -9,7 +9,7 @@ sh int status err-disabled
 conf t  
 int .. (port angeben)  
 shut  
-no shut
+no shut  
 exit   
 
 ### Liste Port-Status, nehme die einfachen Gigabit Ports raus (und zeige nur 10GbE)  
