@@ -1,6 +1,9 @@
 # Ein ganz einfaches, Basis Ping-Script für einfaches Netzwerk Monitoring 
 ##(besser als nix! und ist schnell gepflegt und im Fehlerfall kann es helfen)  
 
+#Script zb. über Scheduled task laufen lassen. powershell.exe mit dem Parameter Scriptpfad (zb. C:\scripts\ping_Alert.ps1) ausführen.  
+#wenn AD Check nötig, braucht der User, der das Script ausführt entsprechende Berechtigungen.  
+
 #contoso.com durch eigene (lokale) domain ersetzen
 
 ### manueller One-Liner  
