@@ -1,4 +1,5 @@
-# Ein ganz einfaches, Basis Ping-Script für einfaches Netzwerk Monitoring (besser als nix! und ist schnell gepflegt und im Fehlerfall kann es helfen)  
+# Ein ganz einfaches, Basis Ping-Script für einfaches Netzwerk Monitoring 
+##(besser als nix! und ist schnell gepflegt und im Fehlerfall kann es helfen)  
 
 #contoso.com durch eigene (lokale) domain ersetzen
 
