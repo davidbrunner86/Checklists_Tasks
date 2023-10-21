@@ -34,7 +34,8 @@ if (-not (Test-Connection $server.Name -quiet -count 10)) {send-mailmessage -to 
 #Zwischen 5 und 10, also Anfangszeit BusinessHours  
 if ($DateTimeNow.TimeOfDay.Hours -ge 5 -and $DateTimeNow.TimeOfDay.Hours -le 10){  
 
-# ...
+#...  
+
 }  
 
 
