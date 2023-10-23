@@ -45,3 +45,13 @@ Es ist nötig, dass der lokale Dienst "NT SERVICE\MpsSvc" Vollzugriff auf den Or
 Natürlich reicht der Firewall Ordner auch, wenn man eh explizit diesen angibt.  
 
 Sehr ärgerlich...  
+
+
+# Treiber exportieren  
+
+#Treiber eines laufendes Systems exportieren, wenn man kein Tool (zb. DoubleDriver Portable) verwenden will  
+
+-Terminal als Administrator starten  
+-Ausgabeverzeichnis erstellen (zb. c:\install)
+- *pnputil /export-driver * c:\install*
+
