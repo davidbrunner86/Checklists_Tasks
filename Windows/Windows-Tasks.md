@@ -53,5 +53,5 @@ Sehr ärgerlich...
 
 -Terminal als Administrator starten  
 -Ausgabeverzeichnis erstellen (zb. c:\install)
-- *pnputil /export-driver * c:\install*
+- *pnputil /export-driver * c:\install*  
 
