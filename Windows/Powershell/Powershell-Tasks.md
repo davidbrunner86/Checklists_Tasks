@@ -70,3 +70,8 @@ $servers = Get-ADComputer -Filter 'operatingsystem -like "*server*" -and enabled
 foreach ($server in $servers){  
 Invoke-Command -ScriptBlock { Get-NetTCPSetting -Setting Internet | select AutoTuningLevelLocal } -ComputerName $server.Name  
 }  
+
+
+# Hotfix remote abfragen  
+
+Get-HotFix -id KB4577586 -ComputerName Server01.domain.local, server02 -Credential $Credentials
