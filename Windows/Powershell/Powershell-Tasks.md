@@ -58,3 +58,15 @@ foreach($item in $FileList) {
 
 start-sleep -seconds 5  
 }  
+
+
+## NETSH Wert per Loop abfragen  
+
+#Server aus dem AD holen und pro Server den TCPAutoTuning Wert per Netsh abfragen  
+
+Import-Module ActiveDirectory  
+$servers = Get-ADComputer -Filter 'operatingsystem -like "*server*" -and enabled -eq "true"' -Properties Name,Operatingsystem,OperatingSystemVersion,IPv4Address | Sort-Object -Property Operatingsystem | Select-Object -Property Name  
+
+foreach ($server in $servers){  
+Invoke-Command -ScriptBlock { Get-NetTCPSetting -Setting Internet | select AutoTuningLevelLocal } -ComputerName $server.Name  
+}  
