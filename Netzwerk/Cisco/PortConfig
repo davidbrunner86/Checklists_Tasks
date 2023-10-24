@@ -1,0 +1,21 @@
+# zuerst reset  
+
+conf t  
+default int gi1/0/xx  
+
+# Beispiel AccessPort  
+
+int gi1/0/1  
+description Client  
+switchport mode access  
+switchport access vlan 1  
+spanning-tree portfast  
+spanning-tree bpduguard enable  
+storm-control broadcast level 5.00  
+
+# Beispiel Trunk  
+
+interface GigabitEthernet1/0/13  
+ description ESX01  
+ switchport trunk allowed vlan 1,3-6,8,10  
+ switchport mode trunk  
