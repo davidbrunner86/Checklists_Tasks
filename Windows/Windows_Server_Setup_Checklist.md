@@ -78,21 +78,22 @@ bei hyper-v : floppy entfernen:
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk -- start von 3 auf 4 ändern
 
 
-Windows FW Regeln ausdünnen
- $FirewallRules = @(
-„AllJoyn-Router (TCP eingehend)“,
-„AllJoyn-Router (TCP ausgehend)“,
-„AllJoyn-Router (UDP eingehend)“,
-„AllJoyn-Router (UDP ausgehend)“,
-„Erfassungsportalablauf“,
-‚“Wiedergabe auf Gerät“-Funktionalität (qWave-TCP eingehend)‘,
-‚“Wiedergabe auf Gerät“-Funktionalität (qWave-TCP ausgehend)‘,
-‚“Wiedergabe auf Gerät“-Funktionalität (qWave-UDP eingehend)‘,
-‚“Wiedergabe auf Gerät“-Funktionalität (qWave-UDP ausgehend)‘,
-‚“Wiedergabe auf Gerät“-SSDP-Suche (UDP eingehend)‘,
-‚“Wiedergabe auf Gerät“-Streamingserver (HTTP-Streaming eingehend)‘,
-‚“Wiedergabe auf Gerät“-Streamingserver (RTCP-Streaming eingehend)‘,
-‚“Wiedergabe auf Gerät“-Streamingserver (RTP-Streaming ausgehend)‘,
+#Windows FW Regeln ausdünnen  
+```
+$FirewallRules = @(  
+„AllJoyn-Router (TCP eingehend)“,  
+„AllJoyn-Router (TCP ausgehend)“,  
+„AllJoyn-Router (UDP eingehend)“,  
+„AllJoyn-Router (UDP ausgehend)“,  
+„Erfassungsportalablauf“,  
+‚“Wiedergabe auf Gerät“-Funktionalität (qWave-TCP eingehend)‘,  
+‚“Wiedergabe auf Gerät“-Funktionalität (qWave-TCP ausgehend)‘,  
+‚“Wiedergabe auf Gerät“-Funktionalität (qWave-UDP eingehend)‘,  
+‚“Wiedergabe auf Gerät“-Funktionalität (qWave-UDP ausgehend)‘,  
+‚“Wiedergabe auf Gerät“-SSDP-Suche (UDP eingehend)‘,  
+‚“Wiedergabe auf Gerät“-Streamingserver (HTTP-Streaming eingehend)‘,  
+‚“Wiedergabe auf Gerät“-Streamingserver (RTCP-Streaming eingehend)‘,  
+‚“Wiedergabe auf Gerät“-Streamingserver (RTP-Streaming ausgehend)‘,  
 ‚“Wiedergabe auf Gerät“-Streamingserver (RTSP-Streaming eingehend)‘,
 ‚“Wiedergabe auf Gerät“-UPnP-Ereignisse (TCP eingehend)‘,
 „Benutzererfahrungen und Telemetrie im verbundenen Modus“,
@@ -114,6 +115,7 @@ Windows FW Regeln ausdünnen
 foreach ($FirewallRule in $FirewallRules) {
 Get-NetFirewallRule -Displayname $FirewallRule | Set-NetFirewallRule -Enabled:false
 } 
+```
 
 IIS Logs - Ordner komprimieren
 
