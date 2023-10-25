@@ -78,3 +78,9 @@ net start msiserver
 c:\windows\system32\wuauclt.exe /detectnow  
 net start wuauserv  
 echo this is a dummy line  
+
+
+# WSUSOffline  
+
+#einfaches updaten via Script  
+DoUpdate /updatecpp /instdotnet35 /updatecerts /verify  
