@@ -87,9 +87,9 @@ DoUpdate /updatecpp /instdotnet35 /updatecerts /verify
 
 # Windows 11 Update Automatismen und Popups unterdrücken  
 
-'''
+```
 if(!(Test-Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate')){New-Item 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'}
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersion -value '00000001' -Type DWord –Force
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name "ProductVersion" -value 'Windows 10' -Type String -Force
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersionInfo -value '21H2' -Type String -Force
-'''
+```
