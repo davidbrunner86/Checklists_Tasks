@@ -21,6 +21,10 @@ Servername ändern
 
 WSUS ID resetten
 
+#AzureArc deaktivieren  
+Remove-WindowsFeature AzureArcSetup  
+Disable-WindowsOptionalFeature -Online -FeatureName AzureArcSetup  
+
 .....
 
 RDP aktiviert (temporär)  
