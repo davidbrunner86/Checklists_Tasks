@@ -47,9 +47,9 @@ VeeamOne Ports:
 
 Bei FC Block Storage:  
 Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager  
---- hier fehlt Bild --- 
+--- Beispiel: ---  
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fstorsimple%2Fmedia%2Fstorsimple-configure-mpio-windows-server%2Fic741003.png&f=1&nofb=1&ipt=029805c390bb4e8a66e7e0f6f5412fc1f0984255bf24c4337695e206cedebc75&ipo=images">  
-(Beispiel)
+
 
 schadet zwischendurch nicht:  
 ipconfig /flushdns && ipconfig /registerdns  
