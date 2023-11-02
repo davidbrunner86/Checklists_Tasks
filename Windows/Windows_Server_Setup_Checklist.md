@@ -48,6 +48,8 @@ VeeamOne Ports:
 Bei FC Block Storage:  
 Windows SErver Funktion "Multipath I/O" installieren, damit FC Verbindungen nicht doppelt angezeigt werden im Diskmanager  
 --- hier fehlt Bild --- 
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fstorsimple%2Fmedia%2Fstorsimple-configure-mpio-windows-server%2Fic741003.png&f=1&nofb=1&ipt=029805c390bb4e8a66e7e0f6f5412fc1f0984255bf24c4337695e206cedebc75&ipo=images">  
+(Beispiel)
 
 schadet zwischendurch nicht:  
 ipconfig /flushdns && ipconfig /registerdns  
@@ -143,15 +145,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Prof
 
 Powershell:
 
-Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\" 
-➜ $UUID = "{01234ABC-...}" ➜ $VALUE = "Network1" ➜ (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID").ProfileName ➜ 
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID" -Name ProfileName -Value $VALUE
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\"  
+➜ $UUID = "{01234ABC-...}"  
+➜ $VALUE = "Network1"  
+➜ (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID").ProfileName  
+➜ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles\$UUID" -Name ProfileName -Value $VALUE  
 
 
 
 .....................
-weitere Vorlagen:
-https://www.alitajran.com/windows-server-post-installation/
+weitere Vorlagen:  
+https://www.alitajran.com/windows-server-post-installation/  
 
 Do not start Server Manager automatically at logon  
 Turn off Internet Explorer Enhanced Security Configuration  
