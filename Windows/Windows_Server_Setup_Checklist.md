@@ -65,6 +65,7 @@ NIC Teaming konfigurieren
 SAN HBAs konfigurieren (?)
 
 Vorlage:
+```
 WSUS ID Reset:
 net stop wuauserv 
 reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f 
@@ -73,13 +74,14 @@ reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusCl
 reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f 
 net start wuauserv 
 wuauclt.exe /resetauthorization /detectnow
+```
 
-winrm quickconfig
-Enable-PSRemoting
-firewall regeln: Icmp, RDP (?), UDP 389 (AD, ...)
-windows defender ?
-bei hyper-v : floppy entfernen:
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk -- start von 3 auf 4 ändern
+winrm quickconfig  
+Enable-PSRemoting  
+firewall regeln: Icmp, RDP (?), UDP 389 (AD, ...)  
+windows defender ?  
+bei hyper-v : floppy entfernen:  
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\flpydisk -- start von 3 auf 4 ändern  
 
 
 #Windows FW Regeln ausdünnen  
