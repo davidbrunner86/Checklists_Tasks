@@ -16,7 +16,7 @@ IPv6 deaktivieren ( ?? wirklich ?? )
 wf.msc anheften  
 Windows OS LizenzKey eintragen und aktivieren  
 
-Logging aktivieren - 3 Logs pro Netzwerkmodus
+Logging aktivieren - 3 Logs pro Netzwerkmodus  
 Servername ändern
 
 WSUS ID resetten
