@@ -74,7 +74,7 @@ Invoke-Command -ScriptBlock { Get-NetTCPSetting -Setting Internet | select AutoT
 
 # Dateitypen eines Unterordners auflisten  
 
-Get-ChildItem "c:\temp" -Recurse -file | select directoryname, Extension -Unique  
+Get-ChildItem "c:\temp" -Recurse -file | select Extension -Unique  
 # Hotfix remote abfragen  
 
 Get-HotFix -id KB4577586 -ComputerName Server01.domain.local, server02 -Credential $Credentials
