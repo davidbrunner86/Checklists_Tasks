@@ -35,6 +35,7 @@ $smtp.Send($message)
 "Mail an " + $smtpTo + " geschickt" | out-file "C:\scripts\PwdExpires_Notify.log" -Append
 
 }
+```
 
 ### Zusatz!
 
@@ -48,6 +49,7 @@ nix mehr mit "plötzlich geht nix mehr, weil es zu Mittag abgelaufen ist
 #>
 
 # Get the users, whose passwords will expire in the next 15 days
+```
 $ADUserPWDExpires = Get-ADUser -filter * -properties PasswordNeverExpires,msDS-UserPasswordExpiryTimeComputed | where {$_.enabled -eq $true -and $_.PasswordNeverExpires -eq  $False} | select SID,Name,@{Name="ExpiryDate";Expression={([datetime]::FromFileTime($_."msDS-UserPasswordExpiryTimeComputed")).DateTime}} | where {($_.ExpiryDate | get-date)  -gt (get-date) -and ($_.ExpiryDate | get-date) -lt (get-date).adddays(7) }
 
 
@@ -72,3 +74,4 @@ if (($tempdate).Date -eq (get-date).Date){
 
 
 }
+``
