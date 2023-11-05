@@ -6,7 +6,7 @@ $AdUserExpiresPwd = Get-ADUser -filter * -properties PasswordNeverExpires,msDS-U
 #Log Eintrag
 "Start Script am  $(Get-Date -F 'dd.MM.yyyy hh:mm')" | out-file "C:\scripts\PwdExpires_Notify.log" -Append
 
-``
+```
 $smtpServer = "mail.contoso.com"
 $smtpFrom = "edv@contoso.com"
 
