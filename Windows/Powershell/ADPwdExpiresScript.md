@@ -1,14 +1,14 @@
 #Wo das Kennwort die nächsten 7 Tage abläuft  
 ```
 $AdUserExpiresPwd = Get-ADUser -filter * -properties PasswordNeverExpires,msDS-UserPasswordExpiryTimeComputed,mail | where {$_.enabled -eq $true -and $_.PasswordNeverExpires -eq  $False} | select Name,@{Name="ExpiryDate";Expression={([datetime]::FromFileTime($_."msDS-UserPasswordExpiryTimeComputed")).DateTime}},givenname,mail | where {($_.ExpiryDate | get-date)  -gt (get-date) -and ($_.ExpiryDate | get-date) -lt (get-date).adddays(7) }
-``
+```
 
 #Log Eintrag
 "Start Script am  $(Get-Date -F 'dd.MM.yyyy hh:mm')" | out-file "C:\scripts\PwdExpires_Notify.log" -Append
 
-
-$smtpServer = "mail.gia.co.at"
-$smtpFrom = "edv@gia.co.at"
+``
+$smtpServer = "mail.contoso.com"
+$smtpFrom = "edv@contoso.com"
 
 $messageSubject = "Das Windows Passwort läuft bald ab"
 
