@@ -22,6 +22,10 @@ Anlage im ERP System als Benutzer
 
 Einrichtung Hardware (nach extra Checkliste)  
 
+Div. Zugänge einrichten (Mitgliedschaft sollte dokumentiert sein in Excel, AD Gruppen, ... )  
+- Zoom  
+- Adobe Suite  
+- ...  
 
 ### Aktualisieren Dokumentation  
 zentrales Adressbuch  
