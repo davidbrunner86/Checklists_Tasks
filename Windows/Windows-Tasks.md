@@ -93,3 +93,8 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name "ProductVersion" -value 'Windows 10' -Type String -Force
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' -Name TargetReleaseVersionInfo -value '21H2' -Type String -Force
 ```
+
+### Windows 11 Zwangsregistrierung umgehen  
+
+Als Konto "billgates" oder "elonmusk" verwenden ...  
+
