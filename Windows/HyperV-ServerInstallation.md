@@ -1,5 +1,7 @@
 # Installation eines Hyper-V Servers ( 2019 ) von ISO  
 
+### veraltet! MS bietet keinen neueren Server als die 2019er Variante an. Stattdessen ist der non-free Server 2022 (und +) dafür zu nehmen (Core Installation am besten)  
+
 Unformatierte HDD als Ganzes als Ziel verwenden  
 Administratorkennwort vergeben  
 
