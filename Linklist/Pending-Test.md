@@ -21,4 +21,13 @@ https://www.veeam.com/de/agent-for-windows-community-edition.html
 https://rclone.org/  
 
 
+###RDP / remoting:  
+RDPWrapper: https://github.com/stascorp/rdpwrap  
+https://woshub.com/how-to-allow-multiple-rdp-sessions-in-windows-10/  
+https://www.helpwire.app/blog/allow-multiple-remote-desktop-connections-windows-10/  
+https://duckduckgo.com/?q=rdp+multi+manager&t=brave&ia=web  
+https://mremoteng.org/  
+https://alternativeto.net/browse/search/?q=mremoteng  
+
+
 Adblock auf Gl.inet Geräte statt AdGuard Home (braucht mehr Ressourcen)  
