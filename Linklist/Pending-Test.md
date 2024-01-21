@@ -31,3 +31,9 @@ https://alternativeto.net/browse/search/?q=mremoteng
 
 
 Adblock auf Gl.inet Geräte statt AdGuard Home (braucht mehr Ressourcen)  
+
+
+# VMWare ist für KMU (und auch etwas größere Unternehmen) bald keine Option mehr für Neukauf/Erweiterung. Alternative: Hyper-V, KVM, Proxmox  
+Auch ESXi Free wird es wohl nicht mehr so geben  
+https://administrator.de/knowledge/vmware-kuendigt-allen-partnern-8119589414.html?nid=10416544907#comment-73314618287  
+https://www.reddit.com/r/sysadmin/comments/19878yi/vmware_will_no_longer_let_users_use_esxi_for_free/  
