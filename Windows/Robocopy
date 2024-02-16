@@ -1,4 +1,8 @@
 ### div. Robocopy Commands
 
-#Allgemeiner Copy Befehl. Komplettes Mirroring!
+#Allgemeiner Copy Befehl. Komplettes Mirroring!  
 robocopy E:\CitrixShares \\giatechbrprofil\e$\CitrixShares /MIR /B /R:1 /W:1 /Copyall  
+
+#Kopiert nur Dateien mit vordefiniertem Maximalalter von einem Tag, mirroring und erstellt keine leeren Ordner  
+robocopy c:\source c:\destination /maxage:1 /mir /s  
+
