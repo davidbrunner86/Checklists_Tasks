@@ -6,3 +6,19 @@ robocopy E:\CitrixShares \\giatechbrprofil\e$\CitrixShares /MIR /B /R:1 /W:1 /Co
 #Kopiert nur Dateien mit vordefiniertem Maximalalter von einem Tag, mirroring und erstellt keine leeren Ordner  
 robocopy c:\source c:\destination /maxage:1 /mir /s  
 
+
+# Erklärung  
+
+File        Exists In   Exists In        Source/Dest     Source/Dest   Source/Dest  
+Class       Source      Destination      File Times      File Sizes    Attributes  
+=========== =========== ================ =============== ============= ============  
+Lonely      Yes         No               n/a             n/a           n/a  
+Tweaked     Yes         Yes              Equal           Equal         Different  
+Same        Yes         Yes              Equal           Equal         Equal  
+Changed     Yes         Yes              Equal           Different     n/a  
+Newer       Yes         Yes              Source > Dest   n/a           n/a  
+Older       Yes         Yes              Source < Dest   n/a           n/a  
+Extra       No          Yes              n/a             n/a           n/a  
+Mismatched  Yes (file)  Yes (directory)  n/a             n/a           n/a  
+
+
