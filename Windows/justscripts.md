@@ -73,3 +73,7 @@ winsat.exe disk -drive c:
 ## DomainController auflisten von beliebiger Workstation/Server  
 netdom query /d:domain.local DC  
 
+
+# Check Commands  
+chkdsk C: & Dism /Online /Cleanup-Image /ScanHealth & Dism /Online /Cleanup-Image /CheckHealth & DISM /Online /Cleanup-Image /RestoreHealth & sfc /scannow & cleanmgr /verylowdisk /autoclean  
+#prüft C:, korrigiert System mit DISM, danach mit SFC und danach aufräumen mit Cleanmgr  
