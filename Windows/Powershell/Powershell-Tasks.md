@@ -18,6 +18,11 @@ Dann das Script:
 New-NetIPAddress –IPAddress 192.168.1.13 -DefaultGateway 192.168.1.1 -PrefixLength 24 -InterfaceIndex IfIndex  
 
 
+## Eventlog  
+Get-WindowsUpdateLog  
+
+--> export .etl Logs win10/server2016 auf Desktop  
+
 
 ## GMSA Account erstellen  
 
