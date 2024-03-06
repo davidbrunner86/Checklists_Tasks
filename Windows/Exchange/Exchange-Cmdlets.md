@@ -44,3 +44,17 @@ Remove-StoreMailbox -Database DBPublicFolder -Identity "03f3ee63-3029-4821-a5a8-
 
 #Anzahl Mailboxen (alle) pro DB zählen  
 Get-Mailbox -ResultSize Unlimited -Database "DB01" | Group-Object -Property:Database | Select-Object Name, Count | Format-Table  
+
+
+#Mailbox-Sizes  
+
+$Mailboxsizes = Get-MailboxStatistics -Server giatechbrmail | Select-Object DisplayName, @{Name="TotalItemSizeMB"; Expression={[math]::Round(($_.TotalItemSize.ToString().Split("(")[1].Split(" ")[0].Replace(",","")/1MB),0)}}, ItemCount | Sort-Object TotalItemSizeMB -Descending  
+
+$Mailboxdeletedfoldersizes = $AllMailboxes | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope DeletedItems | select Identity, FolderAndSubfolderSize | Sort-Object -Property FolderAndSubfolderSize } | Where-Object FolderAndSubfolderSize -like *GB*  
+
+$Mailboxsentfoldersizes = $AllMailboxes | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope SentItems | select Identity, FolderAndSubfolderSize | Sort-Object -Property FolderAndSubfolderSize } | Where-Object FolderAndSubfolderSize -like *GB*  
+
+
+$AllMailboxes = Get-Mailbox -ResultSize Unlimited  
+
+$Mailboxbigfoldersizes = $AllMailboxes | foreach {Get-MailboxFolderStatistics -Identity $_.Identity | select Identity, FolderAndSubfolderSize | Sort-Object -Property FolderAndSubfolderSize } | Where-Object FolderAndSubfolderSize -like *GB*  
