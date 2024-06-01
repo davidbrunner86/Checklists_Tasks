@@ -1,0 +1,81 @@
+	<#
+.SYNOPSIS
+Creates an XML database.
+ 
+.DESCRIPTION
+This function creates an XML database by generating an XML file with a specified structure and data.
+ 
+.PARAMETER filePath
+The path where the XML file will be created.
+ 
+.PARAMETER data
+An array of hash tables representing the data to be stored in the XML database. Each hash table represents a record, with keys representing field names and values representing field values.
+ 
+.EXAMPLE
+Create-XmlDatabase -filePath "C:\data.xml" -data @(
+    @{ Name = "John"; Age = 25; City = "New York" },
+    @{ Name = "Jane"; Age = 30; City = "Los Angeles" }
+)
+Creates an XML database file at "C:\data.xml" with two records.
+ 
+.NOTES
+The XML file will have the following structure:
+<database>
+    <record>
+        <field1>value1</field1>
+        <field2>value2</field2>
+        ...
+    </record>
+    <record>
+        <field1>value1</field1>
+        <field2>value2</field2>
+        ...
+    </record>
+    ...
+</database>
+#>
+function Create-XmlDatabase {
+    param (
+        [string]$filePath,
+        [array]$data
+    )
+ 
+    # Create a new XML document
+    $xmlDoc = New-Object System.Xml.XmlDocument
+ 
+    # Create the root element
+    $root = $xmlDoc.CreateElement("database")
+    $xmlDoc.AppendChild($root)
+ 
+    # Loop through the data array and create record elements
+    foreach ($recordData in $data) {
+        $record = $xmlDoc.CreateElement("record")
+ 
+        # Loop through the hash table and create field elements
+        foreach ($field in $recordData.GetEnumerator()) {
+            $fieldName = $field.Key
+            $fieldValue = $field.Value
+ 
+            $fieldElement = $xmlDoc.CreateElement($fieldName)
+            $fieldElement.InnerText = $fieldValue
+ 
+            $record.AppendChild($fieldElement)
+        }
+ 
+        $root.AppendChild($record)
+    }
+ 
+    # Save the XML document to the specified file path
+    $xmlDoc.Save($filePath)
+}
+ 
+# Usage example for the Create-XmlDatabase function
+ 
+# Create an array of hash tables representing the data
+$data = @(
+    @{ Name = "John"; Age = 25; City = "New York" },
+    @{ Name = "Jane"; Age = 30; City = "Los Angeles" }
+)
+ 
+# Call the Create-XmlDatabase function to create the XML database file
+Create-XmlDatabase -filePath "C:\data.xml" -data $data
