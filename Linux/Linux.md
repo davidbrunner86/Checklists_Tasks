@@ -26,10 +26,10 @@ https://wiki.archlinux.org/title/rsync#Full_system_backup
 
 ## Free disk space allgemein  
 
-Speicherplatz anzeigen vom Apt Cache:  
+<ins>Speicherplatz anzeigen vom Apt Cache:</ins>  
 sudo du -sh /var/cache/apt  
 
-diesen löschen:  
+<ins>diesen löschen:</ins>  
 sudo apt-get clean  
 
 ## Free disk space / ref Citrix ADC  
