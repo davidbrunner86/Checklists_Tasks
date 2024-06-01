@@ -48,5 +48,5 @@ PermitRootLogin yes
 
 save  
 
-# /etc/init.d/ssh restart  
+/etc/init.d/ssh restart  
 
