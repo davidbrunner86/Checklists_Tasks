@@ -24,6 +24,13 @@ sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mn
 https://wiki.archlinux.org/title/rsync#Full_system_backup
 
 
+## Free disk space allgemein  
+
+Speicherplatz anzeigen vom Apt Cache:  
+sudo du -sh /var/cache/apt  
+
+diesen löschen:  
+sudo apt-get clean  
 
 ## Free disk space / ref Citrix ADC  
 https://docs.netscaler.com/en-us/citrix-adc/12-1/system/troubleshooting-citrix-adc/how-to-free-space-on-var-directory.html
