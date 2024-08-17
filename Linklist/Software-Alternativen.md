@@ -8,3 +8,10 @@
 | Content Cell  | Content Cell  | Content Cell  |****
 | Content Cell  | Content Cell  | Content Cell  |****
 | Content Cell  | Content Cell  | Content Cell  |****
+
+
+Suchmaschinen:  
+
+https://alternativeto.net  
+https://opensource.builders/  
+
