@@ -1,6 +1,4 @@
-NAC Lösung  
-
-Macmon (Kommerziell) oder Packetfence ( https://www.packetfence.org/ )   
+**Allgemeine Software Alternativen
 
 | Software  | Alternativen | Infos |
 | ------------- | ------------- | ------------- |
