@@ -3,7 +3,7 @@
 | Software  | Alternativen | Infos |
 | ------------- | ------------- | ------------- |
 | Macmon (Kommerziell)  | Packetfence (https://www.packetfence.org/ )   | NAC Lösungen  |
-| Content Cell  | Content Cell  | Content Cell  |****
+| Photoshop  | Photopea (browser)  | Content Cell  |****
 | Content Cell  | Content Cell  | Content Cell  |****
 | Content Cell  | Content Cell  | Content Cell  |****
 | Content Cell  | Content Cell  | Content Cell  |****
