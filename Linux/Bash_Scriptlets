@@ -1,0 +1,69 @@
+# Generelle Scriptlets / Vorlagen  
+
+#Immer hiermit starten  
+ #!/bin/sh  
+
+
+#https://stackoverflow.com/questions/51600299/best-practice-to-source-a-config-file-in-bash
+............................
+#Check the config file
+source_variables () {
+    source /path/index.conf
+    #TODO: if the file does not exist, create the file
+    #TODO: file exists, but missing some variables, fill them with default values
+    test -e /path/index.conf
+    if test "$VAR1" = "0" ; then
+        echo "VAR1 successfully replaced "
+    fi
+
+   #TODO: If any variable contains $,%, and & (for example VAR3). Flag it and return 1.
+
+   #import all the variables and declare them as local
+   local var_a = $VAR1
+   local var_b = $VAR2
+   # ...etc  
+   return 0 #checking successful  
+}
+
+
+#!/usr/bin/env sh
+
+config=config
+
+var1_default=0
+var2_default=0
+var3_default=0
+password_default="default_password"
+email_default="default@email.com"
+
+source_variables () {
+    if [ ! -f "$config" ]
+    then
+    printf "No config found, creating default config\n" >&2
+    {
+        echo VAR1="$var1_default" >> "$config"
+        echo VAR2="$var2_default" >> "$config"
+        echo VAR3="$var3_default" >> "$config"
+        echo PASSWORD="$password_default" >> "$config"
+        echo EMAL="$email_default" >> "$config"
+    } >> "$config"
+    fi
+
+    . "$PWD"/read_ini.sh
+    read_ini "$config"
+
+    var1="${INI__VAR1:-${var1_default}}"
+    var2="${INI__VAR2:-${var2_default}}"
+    var3="${INI__VAR3:-${var3_default}}"
+    password="${INI__PASSWORD:-${password_default}}"
+    email="${INI__email:-${email_default}}"
+}
+
+source_variables
+
+echo VAR1: "$var1"
+echo VAR2: "$var2"
+echo VAR3: "$var3"
+echo PASSWORD: "$password"
+echo EMAIL: "$email"
+.............................................
