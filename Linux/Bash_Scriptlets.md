@@ -1,4 +1,4 @@
-# Generelle Scriptlets / Vorlagen
+# Generelle Scriptlets / Vorlagen  
 
-#Immer hiermit starten
-'#!/bin/sh
+#Immer hiermit starten  
+ #!/bin/sh  
