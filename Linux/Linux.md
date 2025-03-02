@@ -1,3 +1,67 @@
+## Move file preserving security info  
+
+rsync -A --acls -X --xattrs -o --owner -g --group
+
+mv --> preserves ownership  (if same filesystem / partition)
+cp :  
+cp -p file1 file2  
+
+## listing users  
+
+/etc/passwd  
+
+ou can use getent passwd or cat /etc/passwd to access the passwd file  
+
+getend passwd | grep username  
+
+
+## adding a user  
+
+useradd -m -s /bin/bash testuser  
+
+## modifying user  
+
+passwd username  
+
+## deleting user password  
+
+passwd -d username  
+
+## locking a user  
+
+passwd -l username  
+
+## modifying the user primary group  
+
+usermod -g groupname username  
+
+## deleting a user  
+
+userdel username  
+
+## enablings password aging for a user
+
+chage -M 20 username  
+(20  days)  
+
+## disabling password aging for a user  
+
+chage -I -1 -E -1 -m 0 -M 99999 username  
+
+
+## Dateien und Verzeichnisse auflisten in Shell  
+
+du -sh *  
+(du --summarize --human-readable *)  
+
+du -sk * | sort -n  
+(sort folders by size)  
+
+du -sh * | sort -hr | head -n10  
+
+source: https://stackoverflow.com/questions/1019116/using-ls-to-list-directories-and-their-total-sizes  
+
+
 ## System klonen
 
 <ins>Beispiel mit dd - backup von sda in ein Image</ins>  
