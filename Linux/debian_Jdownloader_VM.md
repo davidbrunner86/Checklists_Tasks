@@ -1,7 +1,7 @@
-Debian Setup
+#Debian Setup
 
-# normal install, mind 2 partitionen (sys+home) oder besser 3 (sys+var+home)
-# login (desktop oder cli)
+normal install, mind 2 partitionen (sys+home) oder besser 3 (sys+var+home)
+login (desktop oder cli)
 
 :desktop
 
