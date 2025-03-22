@@ -41,10 +41,10 @@ sudo visudo
 meinuser ALL=(ALL:ALL) ALL  
 
 
-...nas mount
-... firefox restart tabs
-...jdbackup einspielen
-...?
+...nas mount  
+... firefox restart tabs  
+...jdbackup einspielen  
+...?  
 
 
 bei mate : programme einfach auf taskbar ziehen
