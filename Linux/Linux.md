@@ -6,6 +6,8 @@ mv --> preserves ownership  (if same filesystem / partition)
 cp :  
 cp -p file1 file2  
 
+
+( sources: https://www.marksei.com/linux-users-groups-tutorial/ )   
 ## listing users  
 
 /etc/passwd  
