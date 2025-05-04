@@ -58,3 +58,6 @@ $Mailboxsentfoldersizes = $AllMailboxes | foreach {Get-MailboxFolderStatistics -
 $AllMailboxes = Get-Mailbox -ResultSize Unlimited  
 
 $Mailboxbigfoldersizes = $AllMailboxes | foreach {Get-MailboxFolderStatistics -Identity $_.Identity | select Identity, FolderAndSubfolderSize | Sort-Object -Property FolderAndSubfolderSize } | Where-Object FolderAndSubfolderSize -like *GB*  
+
+#ReceiveConnector anpassen, Anmeldung  
+Get-ReceiveConnector "Anonymes Relay" | Add-ADPermission -User "NT-Autorität\Anonymous-Anmeldung" -ExtendedRights "Ms-Exch-SMTP-Accept-Any-Recipient"
