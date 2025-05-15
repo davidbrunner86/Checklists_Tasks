@@ -28,3 +28,8 @@ Sfc /ScanNow
 
 
  
+# Export Treiber  
+###exportiert Driver in einen Ordner  
+
+dism /online /export-driver /destination:"C:\Users\%Username%\Desktop\driverbackup"  
+
