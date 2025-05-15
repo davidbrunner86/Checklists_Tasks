@@ -86,4 +86,4 @@ Get-HotFix -id KB4577586 -ComputerName Server01.domain.local, server02 -Credenti
 
 
 # Wenn Wochenende, breche ab  
-if (( @(6,0).foreach(  {$_ -eq [int](Get-Date).dayofweek} ) -contains $true )) {exit 2}  
+if (( @(6,0).foreach( {$_ -eq [int](Get-Date).dayofweek} ) -contains $true )) {exit 2}  
