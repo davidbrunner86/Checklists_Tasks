@@ -7,7 +7,7 @@ https://williamlam.com/2018/05/how-to-simulate-persistent-memory-pmem-in-vsphere
 Konfig:  
 
 -esxcli:  
-   esxcli system settings kernel set -s fakePmemPct -v 25  
+     esxcli system settings kernel set -s fakePmemPct -v 25  
   (25 %)  
 -reboot
 
@@ -16,4 +16,4 @@ Konfig:
  
 
 Check:  
-  esxcli system settings kernel list -o fakePmemPct****
+    esxcli system settings kernel list -o fakePmemPct****
