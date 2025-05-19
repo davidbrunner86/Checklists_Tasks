@@ -18,7 +18,7 @@ np:\\.\pipe\MSSQL$MICROSOFT##SSEE\sql\query
 select * from dbo.tbcomputertarget join dbo.tbcomputertargetdetail on dbo.tbcomputertarget.TargetID = dbo.tbcomputertargetdetail.TargetID  
 
 
-#remap user nach Migration  
+## remap user nach Migration  
 
 fehler:  
 User, group, or role '{login}' already exists in the current database.  
@@ -27,7 +27,7 @@ lösung:
 USE {database};  
 ALTER USER {user} WITH login = {login}  
 
-#simple PowerShell SQL (simple) backup  
+## simple PowerShell SQL (simple) backup  
 
 Backup-SqlDatabase -ServerInstance "SERVER\INSTANCE" -Database "MyDBNAme" -BackupFile "D:\SQL_Backup\Backup-myDB.bak"  
 
