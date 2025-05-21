@@ -15,6 +15,11 @@ Get-MoveRequest | where{$_.Status -ne "Completed"} | Get-MoveRequestStatistics |
 get-mailbox "chuck.norris" | new-moverequest -TargetDatabase DB01  
 
 
+#Verbundene Clients abfragen:  
+Get-NetTCPConnection | where {(($_.localport -eq 443) -and ($_.remoteport -ne 0))} | select LocalAddress,RemoteAddress,RemotePort,State,CreationTime | out-gridview  
+( quelle: https://www.msxfaq.de/exchange/tools/auswertung/tcpconnection_report.htm )  
+
+
 #AMSI deaktivieren:  
 New-SettingOverride -Name "DisablingAMSIScan" -Component Cafe -Section HttpRequestFiltering -Parameters ("Enabled=False") -Reason "Testing"  
 Get-ExchangeDiagnosticInfo -Process Microsoft.Exchange.Directory.TopologyService -Component VariantConfiguration -Argument Refresh  
