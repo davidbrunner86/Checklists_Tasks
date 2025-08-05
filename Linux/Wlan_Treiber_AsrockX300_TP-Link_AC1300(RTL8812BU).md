@@ -15,6 +15,8 @@ sudo ./deploy.sh
 
 make
 sudo make install
+
+# Modul laden
 sudo modprobe 88x2bu
 
 # Falschen Treiber (rtl8xxxu) blockieren
@@ -34,3 +36,18 @@ dmesg | grep -i firmware
 # IF prüfen
 ip a
 ip link
+nmcli device status
+nmcli device wifi list
+
+lsmod | grep 8812au
+lsmod | grep 88x2bu
+
+# Hilfreiches:
+#zeigt, wo DKMS liegt. vermutlich in /usr/sbin
+dpkg -L dkms | grep bin
+
+#wenn /usr/sbin nicht im PATH enthalten ist, wird dkms vermutlich nicht gefunden
+echo $PATH
+
+#temporär in $PATH hinzufügen:
+export PATH=$PATH:/usr/sbin
